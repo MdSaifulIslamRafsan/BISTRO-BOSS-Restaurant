@@ -1,5 +1,5 @@
-import SectionTitle from "./SharePage/SectionTitle";
-import featuredImg from "../assets/home/featured.jpg";
+import SectionTitle from "../SharePage/SectionTitle";
+import featuredImg from "../../assets/home/featured.jpg";
 
 const Featured = () => {
   return (
@@ -7,7 +7,7 @@ const Featured = () => {
       style={{
         background: `linear-gradient(0deg, rgba(21, 21, 21, 0.70) 0%, rgba(21, 21, 21, 0.70) 100%),url(${featuredImg})`,
       }}
-      className="mb-20 bg-fixed text-white"
+      className="!bg-fixed text-white pt-8 my-20"
     >
       <SectionTitle
         subHeading={"---Check it out---"}
@@ -31,7 +31,6 @@ const Featured = () => {
           </button>
         </div>
       </div>
-      
     </section>
   );
 };
