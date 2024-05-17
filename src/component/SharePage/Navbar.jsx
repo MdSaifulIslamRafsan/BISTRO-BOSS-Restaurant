@@ -1,27 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    const navOptions = <>
-         <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+  const navOptions = (
+    <>
+      <li>
+        <NavLink to={'/'}>Home</NavLink>
+      </li>
+      <li>
+        <NavLink to={'/menu'}>Our Menu</NavLink>
+      </li>
     </>
+  );
   return (
     <div className="navbar max-w-7xl  lg:px-10 mx-auto">
       <div className="navbar-start">
@@ -46,15 +35,21 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-           {navOptions}
+            {navOptions}
           </ul>
         </div>
-        <Link to={'/'}><span className=" text-base font-bold md:text-xl md:font-extrabold lg:text-2xl lg:font-black">BISTRO BOSS</span> <br /><span className="tracking-[.2rem] text-base md:tracking-[.3rem] font-semibold lg:tracking-[.4rem] lg:text-lg lg:font-bold">Restaurant</span></Link>
+        <Link to={"/"}>
+          <span className=" text-base font-bold md:text-xl md:font-extrabold lg:text-2xl lg:font-black">
+            BISTRO BOSS
+          </span>{" "}
+          <br />
+          <span className="tracking-[.2rem] text-base md:tracking-[.3rem] font-semibold lg:tracking-[.4rem] lg:text-lg lg:font-bold">
+            Restaurant
+          </span>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-         {navOptions}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navOptions}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>

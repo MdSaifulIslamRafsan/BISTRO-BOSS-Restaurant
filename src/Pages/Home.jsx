@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet";
 import Banner from "../component/Home/Banner";
 import BistroBoss from "../component/Home/BistroBoss";
 import CallUs from "../component/Home/CallUs";
@@ -7,19 +7,21 @@ import Featured from "../component/Home/Featured";
 import PopularMenu from "../component/Home/PopularMenu";
 import Testimonials from "../component/Home/Testimonials";
 
-
 const Home = () => {
-    return (
-        <div>
-          <Banner></Banner>
-          <Category></Category>
-          <BistroBoss></BistroBoss>
-          <PopularMenu></PopularMenu>
-          <CallUs></CallUs>
-          <Featured></Featured>
-          <Testimonials></Testimonials>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Bistro || Home</title>
+      </Helmet>
+      <Banner></Banner>
+      <Category></Category>
+      <BistroBoss></BistroBoss>
+      <PopularMenu></PopularMenu>
+      <CallUs></CallUs>
+      <Featured></Featured>
+      <Testimonials></Testimonials>
+    </div>
+  );
 };
 
 export default Home;
