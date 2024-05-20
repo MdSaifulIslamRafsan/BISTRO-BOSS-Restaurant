@@ -13,7 +13,7 @@ const Testimonials = () => {
     const [reviews , setReviews] = useState([]);
     useEffect(()=>{
         const reviewsData = async () =>{
-            const response = await fetch('reviews.json');
+            const response = await fetch('http://localhost:5000/review');
             const data = await response.json();
             setReviews(data);
         }

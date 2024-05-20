@@ -9,10 +9,11 @@ import Testimonials from "../component/Home/Testimonials";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Bistro || Home</title>
       </Helmet>
+    <div>
       <Banner></Banner>
       <Category></Category>
       <BistroBoss></BistroBoss>
@@ -21,6 +22,7 @@ const Home = () => {
       <Featured></Featured>
       <Testimonials></Testimonials>
     </div>
+    </>
   );
 };
 
